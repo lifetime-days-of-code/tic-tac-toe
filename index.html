@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <header>
+    <h1>Play Tic, Tac, Toe</h1>
+    <p>Build with HTML, CSS, JavaScript</p>
+  </header>
+  <main>
+    <!-- Aside-> Complimentary content. Extra information, extra navigation or overlay.-->
+    <aside>
+      <h2>Choose your name</h2>
+      <!-- Form -> Because we need to fetch information from the user.-->
+      <!-- Form -> We removed the action attribute because we will hadne the user input with javascript-->
+      <form>
+        <div>
+          <label for="playername">Player Name</label>
+          <input type="text" name="playername" id="playername">
+        </div>
+        <div>
+          <!-- Button -> type=button overwrites the default submit type, to prevent this button of submitting the form-->
+          <button type="button">Cancel</button>
+          <!-- Button -> type=submit is the default type of the button. But we where being explicit here in order to be more clear that this is the button responsible for the submit-->
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </aside>
+    <section id="game-configuration">
+      <ol>
+        <li>
+          <!--Article->Stand-alone part of our page.-->
+          <article>
+            <h2>Player 1</h2>
+            <h3>PLAYER NAME</h3>
+            <p>X</p>
+            <button>Edit</button>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2>Player 2</h2>
+            <h3>PLAYER NAME</h3>
+            <p>O</p>
+            <button>Edit</button>
+          </article>
+        </li>
+      </ol>
+      <button>Start New Game</button>
+    </section>
+    <section id="active-game">
+      <article>
+        <h3>You won, <span id="winner-name">PLAYER NAME</span></h3>
+        <p>Click "Start New Game" above, to start a new game!</p>
+      </article>
+      <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>
