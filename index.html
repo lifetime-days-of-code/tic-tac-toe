@@ -36,9 +36,11 @@
           <label for="playername">Player Name</label>
           <input type="text" name="playername" id="playername">
         </div>
+        <p id="config-errors"></p>
         <div>
           <!-- Button -> type=button overwrites the default submit type, to prevent this button of submitting the form-->
-          <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
+          <!-- <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button> -->
+          <button type="reset" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
           <!-- Button -> type=submit is the default type of the button. But we where being explicit here in order to be more clear that this is the button responsible for the submit-->
           <button type="submit" class="btn">Confirm</button>
         </div>
@@ -48,19 +50,20 @@
       <ol>
         <li>
           <!--Article->Stand-alone part of our page.-->
-          <article>
+          <article id="player-1-data">
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">X</p>
-            <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+            <!--data-... ->You can have multiple data-... properties on one element. The value can be access with the element.dataset(playerid) in this case.-->
+            <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
           </article>
         </li>
         <li>
-          <article>
+          <article id="player-2-data">
             <h2>Player 2</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">O</p>
-            <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+            <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
           </article>
         </li>
       </ol>
