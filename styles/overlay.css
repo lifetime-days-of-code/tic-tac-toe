@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .modal {
+    /* 50% is the middle of the screen and deduct 20 rem to have left border of our modal, which is in the middle of the screen minus 20 rem. We are using 20 rem here as a value because we want to give our modal a fixed width of 40 rem. Which ensures that this is the width of the modal and half of that width is what we want to deduct from the middle so that the modal overall is centered, because we start 20 rem from the middle on the left and then plus 40 rem ends at 50% plus 20 rem. So the center of the modal will be exactly in the middle of the screen if we use those values */
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+}

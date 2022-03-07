@@ -9,22 +9,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/overlay.css">
+  <link rel="stylesheet" href="./styles/configuration.css">
   <title>Tic Tac Toe</title>
 </head>
 
 <body>
+  <!-- Div -> Don't hold any content and its used only for styling purposes.-->
+  <div id="backdrop"></div>
   <header id="main-header">
     <h1>Play Tic, Tac, Toe</h1>
     <p>Build with HTML, CSS, JavaScript and a lot of Club Mate</p>
   </header>
   <main>
     <!-- Aside-> Complimentary content. Extra information, extra navigation or overlay.-->
-    <aside>
+    <aside class="modal" id="config-overlay">
       <h2>Choose your name</h2>
       <!-- Form -> Because we need to fetch information from the user.-->
       <!-- Form -> We removed the action attribute because we will hadne the user input with javascript-->
       <form>
-        <div>
+        <div class="form-control">
           <label for="playername">Player Name</label>
           <input type="text" name="playername" id="playername">
         </div>
