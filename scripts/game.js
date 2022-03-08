@@ -1,6 +1,7 @@
 function resetGameStatus() {
   activePlayer = 0;
   currentRound = 1;
+  gameOver = false;
   gameOverElement.firstElementChild.innerHTML =
     'You won, <span id="winner-name">PLAYER NAME</span>!';
   gameOverElement.style.display = "none";
@@ -41,7 +42,7 @@ function switchPlayer() {
 function selectGameField(event) {
   const selectedField = event.target;
   // the guard below is checking if the element we click is list item if not it returns. If its not here when we click between the fields it will delete all of the LI's.
-  if (event.target.tagName !== "LI") {
+  if (event.target.tagName !== "LI" || gameOver) {
     return;
   }
 
@@ -154,6 +155,7 @@ function checkForGameOver() {
 }
 
 function endGame(winnerId) {
+  gameOver = true;
   gameOverElement.style.display = "block";
   if (winnerId > 0) {
     const winnerName = players[winnerId - 1].name;
